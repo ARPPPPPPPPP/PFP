@@ -41,6 +41,7 @@ class LoginController extends Controller {
 		}
 		$this->assign('APPLICATION_NAME',C('APPLICATION_NAME'));
 		$this->assign('USER_ID',$_SESSION ['userId']);
+		$this->assign('CURRENT_MENU','HOME');
 		$this->display ();
 	}
 	public function logout() {

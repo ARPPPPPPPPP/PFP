@@ -31,25 +31,6 @@ class UserController extends Controller {
 		$tempUser = $user->where ( 'userid=' . $_SESSION ['userId'] )->limit ( 1 )->select ();
 		// dump($tempUser);
 		// return;
-		$academy = M ( 'academy' );
-		$branch = M ( 'branch' );
-		$listAllAcademy = $academy->select ();
-		$listAllBranch = $branch->select ();
-		//将学院和支部转化成信息
-		for($j = 0; $j < count ( $listAllAcademy ); $j ++) {
-			if ($tempUser [0] ['useracademy'] == $listAllAcademy [$j] ['academyid']) {
-				$tempUser [0] ['useracademy'] = $listAllAcademy [$j] ['academyname'];
-				break;
-			}
-			$tempUser [0] ['useracademy'] = '无学院信息';
-		}
-		for($j = 0; $j < count ( $listAllBranch ); $j ++) {
-			if ($tempUser [0] ['userbranch'] == $listAllBranch [$j] ['branchid']) {
-				$tempUser [0] ['userbranch'] = $listAllBranch [$j] ['branchname'];
-				break;
-			}
-			$tempUser [0] ['userbranch'] = '无支部信息';
-		}
 		
 		$this->assign ( "tempUser", $tempUser );
 		$this->show ();
@@ -64,7 +45,6 @@ class UserController extends Controller {
 		$this->assign('CURRENT_MENU','USER');
 		
 		$data ['userId'] = $_GET ['userid'];
-		$data ['userNickname'] = $_POST ['userNickname'];
 		$exUserPassword = $_POST ['exUserPassword'];
 		$data ['userMail'] = $_POST ['userMail'];
 		
@@ -80,11 +60,10 @@ class UserController extends Controller {
 				return;
 			}
 
+		}else{
+			$this->error ( '输入有误！' );
 		}
 		
-// 		dump($tempUser);
-// 		dump($data);
-// 		return;
 		$result = $user->save ( $data );
 		if ($result !== false) {
 

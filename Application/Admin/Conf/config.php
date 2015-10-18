@@ -9,16 +9,16 @@ return array (
 		
 		
 		//后台提示
-		'RELEASE_SUCCESS' => '发布成功 ! ',
-		'RELEASE_FAIL' => '发布失败,请检查输入 ! ',
-		'LOGIN_SUCCESS' => '登录成功 ! ',
-		'LOGIN_FAIL' => '登录失败,请检查输入 ! ',
-		'LOGIN_FIRST' => '请先登录 ! ',
-		'DELETE_FAIL' => '删除错误 ! ',
-		'EDIT_SUCCESS' => '编辑成功 ! ',
-		'EDIT_FAIL' => '编辑错误 ! ',
+		'RELEASE_SUCCESS' => 'Release Succeed ! ',
+		'RELEASE_FAIL' => 'Release Failed ! ',
+		'LOGIN_SUCCESS' => 'Login Succeed ! ',
+		'LOGIN_FAIL' => 'Login Failed Please Check The Input ! ',
+		'LOGIN_FIRST' => 'Please Login First! ',
+		'DELETE_FAIL' => 'Delete Failed ! ',
+		'EDIT_SUCCESS' => 'Edit Succeed ! ',
+		'EDIT_FAIL' => 'Edit Failed ! ',
 		'PAGE_COUNT' => 5,
-		'ADD_SUCCESS' => '添加成功 ! ',
-		'ADD_FAIL' => '添加失败 ! ',
+		'ADD_SUCCESS' => 'Add Succeed ! ',
+		'ADD_FAIL' => 'Add Failed ! ',
 		
 );
