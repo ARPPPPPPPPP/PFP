@@ -7688,3 +7688,385 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
 
+[ 2015-11-06T21:44:04+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/systemSetting
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pfp_systemsetting` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_systemsetting` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_systemsetting` ORDER BY `systemsettingid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 102 行.
+NOTIC: [8] Use of undefined constant systemsettingname - assumed 'systemsettingname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 103 行.
+NOTIC: [8] Use of undefined constant systemsettingcontent - assumed 'systemsettingcontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 106 行.
+NOTIC: [8] Use of undefined constant systemsettingcontent - assumed 'systemsettingcontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 106 行.
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 108 行.
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-06T21:44:04+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:04+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2015-11-06T21:44:05+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/systemSetting
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pfp_systemsetting` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_systemsetting` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_systemsetting` ORDER BY `systemsettingid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 102 行.
+NOTIC: [8] Use of undefined constant systemsettingname - assumed 'systemsettingname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 103 行.
+NOTIC: [8] Use of undefined constant systemsettingcontent - assumed 'systemsettingcontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 106 行.
+NOTIC: [8] Use of undefined constant systemsettingcontent - assumed 'systemsettingcontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 106 行.
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 108 行.
+NOTIC: [8] Use of undefined constant systemsettingid - assumed 'systemsettingid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\0c39a6100e0eab604c4de963f882623d.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:05+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-06T21:44:05+08:00 ] ::1 /PFP/index.php/Admin/SystemSetting/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/HomePicture/allHomePicture.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `pfp_homepicture` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_homepicture` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_homepicture` ORDER BY `homepictureid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/HomePicture/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/HomePicture/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/Download/allDownload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pfp_download` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_download` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_download` ORDER BY `downloadid` desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/Download/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:08+08:00 ] ::1 /PFP/index.php/Admin/Download/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:09+08:00 ] 127.0.0.1 /PFP/index.php/Admin/Log/log.html?operationPeopleId=17&operationNumber=33&operationInformation=View_allBranchApperance
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Log
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/SignUp/allSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pfp_signup` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_signup` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_signup` ORDER BY `signupid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 107 行.
+NOTIC: [8] Use of undefined constant signupname - assumed 'signupname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 108 行.
+NOTIC: [8] Use of undefined constant signupsex - assumed 'signupsex' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 109 行.
+NOTIC: [8] Use of undefined constant signupschool - assumed 'signupschool' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 110 行.
+NOTIC: [8] Use of undefined constant signupmajor - assumed 'signupmajor' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 111 行.
+NOTIC: [8] Use of undefined constant signupcellphone - assumed 'signupcellphone' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 112 行.
+NOTIC: [8] Use of undefined constant signupweixing - assumed 'signupweixing' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 113 行.
+NOTIC: [8] Use of undefined constant signuptime - assumed 'signuptime' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 114 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 116 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 119 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 107 行.
+NOTIC: [8] Use of undefined constant signupname - assumed 'signupname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 108 行.
+NOTIC: [8] Use of undefined constant signupsex - assumed 'signupsex' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 109 行.
+NOTIC: [8] Use of undefined constant signupschool - assumed 'signupschool' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 110 行.
+NOTIC: [8] Use of undefined constant signupmajor - assumed 'signupmajor' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 111 行.
+NOTIC: [8] Use of undefined constant signupcellphone - assumed 'signupcellphone' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 112 行.
+NOTIC: [8] Use of undefined constant signupweixing - assumed 'signupweixing' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 113 行.
+NOTIC: [8] Use of undefined constant signuptime - assumed 'signuptime' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 114 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 116 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/SignUp/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/SignUp/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/allBreakingNews.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: userLevel C:\wamp\www\PFP\Application\Admin\Controller\BreakingNewsController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pfp_breakingnews` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_breakingnews` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pfp_breakingnews` ORDER BY `breakingnewsid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 105 行.
+NOTIC: [8] Use of undefined constant breakingnewsname - assumed 'breakingnewsname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 106 行.
+NOTIC: [8] Use of undefined constant breakingnewstype - assumed 'breakingnewstype' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 107 行.
+NOTIC: [8] Use of undefined constant breakingnewsreleasedate - assumed 'breakingnewsreleasedate' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 108 行.
+NOTIC: [8] Use of undefined constant breakingnewsmaincontent - assumed 'breakingnewsmaincontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 109 行.
+NOTIC: [8] Use of undefined constant breakingnewspageview - assumed 'breakingnewspageview' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 110 行.
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 112 行.
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:09+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/Login/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/Login/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/Login/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/allBreakingNews.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userLevel C:\wamp\www\PFP\Application\Admin\Controller\BreakingNewsController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pfp_breakingnews` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_breakingnews` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `pfp_breakingnews` ORDER BY `breakingnewsid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 105 行.
+NOTIC: [8] Use of undefined constant breakingnewsname - assumed 'breakingnewsname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 106 行.
+NOTIC: [8] Use of undefined constant breakingnewstype - assumed 'breakingnewstype' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 107 行.
+NOTIC: [8] Use of undefined constant breakingnewsreleasedate - assumed 'breakingnewsreleasedate' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 108 行.
+NOTIC: [8] Use of undefined constant breakingnewsmaincontent - assumed 'breakingnewsmaincontent' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 109 行.
+NOTIC: [8] Use of undefined constant breakingnewspageview - assumed 'breakingnewspageview' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 110 行.
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 112 行.
+NOTIC: [8] Use of undefined constant breakingnewsid - assumed 'breakingnewsid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\184f379e905c92559e13237d1d81d1ca.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:10+08:00 ] ::1 /PFP/index.php/Admin/BreakingNews/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:11+08:00 ] 127.0.0.1 /PFP/index.php/Admin/Log/log.html?operationPeopleId=17&operationNumber=33&operationInformation=View_allBranchApperance
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Log
+
+[ 2015-11-06T21:44:11+08:00 ] ::1 /PFP/index.php/Admin/SignUp/allSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pfp_signup` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pfp_signup` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pfp_signup` ORDER BY `signupid` desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 107 行.
+NOTIC: [8] Use of undefined constant signupname - assumed 'signupname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 108 行.
+NOTIC: [8] Use of undefined constant signupsex - assumed 'signupsex' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 109 行.
+NOTIC: [8] Use of undefined constant signupschool - assumed 'signupschool' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 110 行.
+NOTIC: [8] Use of undefined constant signupmajor - assumed 'signupmajor' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 111 行.
+NOTIC: [8] Use of undefined constant signupcellphone - assumed 'signupcellphone' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 112 行.
+NOTIC: [8] Use of undefined constant signupweixing - assumed 'signupweixing' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 113 行.
+NOTIC: [8] Use of undefined constant signuptime - assumed 'signuptime' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 114 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 116 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 119 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 107 行.
+NOTIC: [8] Use of undefined constant signupname - assumed 'signupname' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 108 行.
+NOTIC: [8] Use of undefined constant signupsex - assumed 'signupsex' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 109 行.
+NOTIC: [8] Use of undefined constant signupschool - assumed 'signupschool' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 110 行.
+NOTIC: [8] Use of undefined constant signupmajor - assumed 'signupmajor' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 111 行.
+NOTIC: [8] Use of undefined constant signupcellphone - assumed 'signupcellphone' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 112 行.
+NOTIC: [8] Use of undefined constant signupweixing - assumed 'signupweixing' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 113 行.
+NOTIC: [8] Use of undefined constant signuptime - assumed 'signuptime' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 114 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 116 行.
+NOTIC: [8] Use of undefined constant signupid - assumed 'signupid' C:\wamp\www\PFP\Application\Runtime\Cache\Admin\69b0b5035817c3a2fa9ca71058a5a853.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-06T21:44:11+08:00 ] ::1 /PFP/index.php/Admin/SignUp/resources/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-06T21:44:11+08:00 ] ::1 /PFP/index.php/Admin/SignUp/resources/images/closelabel.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
