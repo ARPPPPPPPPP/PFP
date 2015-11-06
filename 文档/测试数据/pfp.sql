@@ -83,3 +83,14 @@ CREATE TABLE `pfp_signUp` (
   `signUpHandle` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`signUpId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- ----------------------------
+-- Table structure for pfp_systemSetting
+-- ----------------------------
+DROP TABLE IF EXISTS `pfp_systemSetting`;
+CREATE TABLE `pfp_systemSetting` (
+  `systemSettingId` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `systemSettingName` varchar(255) NOT NULL DEFAULT '',
+  `systemSettingContent` varchar(1024) NOT NULL DEFAULT '',
+  PRIMARY KEY (`systemSettingId`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
