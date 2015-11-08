@@ -16,10 +16,10 @@ class BreakingNewsController extends Controller {
 		if (! isset ( $_SESSION ['userId'] )) {
 			$this->error ( C ( 'LOGIN_FIRST' ) );
 		}
-		$this->assign('APPLICATION_NAME',C('APPLICATION_NAME'));
-		$this->assign('USER_ID',$_SESSION ['userId']);
-		$this->assign('USER_LEVEL',$_SESSION ['userLevel']);
-		$this->assign('CURRENT_MENU','BREAKINGNEWS');
+		$this->assign ( 'APPLICATION_NAME', C ( 'APPLICATION_NAME' ) );
+		$this->assign ( 'USER_ID', $_SESSION ['userId'] );
+		$this->assign ( 'USER_LEVEL', $_SESSION ['userLevel'] );
+		$this->assign ( 'CURRENT_MENU', 'BREAKINGNEWS' );
 		
 		$breakingNews = M ( 'breakingnews' );
 		try {
@@ -45,14 +45,69 @@ class BreakingNewsController extends Controller {
 		
 		// 查询当前所有的工作状态并且分页
 		$count = $breakingNews->count ();
-		$page = new \Think\Page ( $count, C ( 'PAGE_COUNT' ),'p1' );
+		$page = new \Think\Page ( $count, C ( 'PAGE_COUNT' ), 'p1' );
 		$page->setP ( 'p1' );
 		$orderby ['breakingnewsid'] = 'desc';
-		$list = $breakingNews->order ( $orderby )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
 		
+		$selectedType = $_GET ['selectedType'];
+		// $selectedType = "1";
+		// dump ( $selectedType == null);
+		// dump ("all" != $selectedType && $selectedType != null);
+		// return;
+		
+		if ("all" != $selectedType && null != $selectedType) {
+			$list = $breakingNews->where ( 'breakingnewstype=' . $selectedType )->order ( $orderby )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
+		} else {
+			$selectedType = "all";
+			$list = $breakingNews->order ( $orderby )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
+			// dump ( $selectedType );
+			// return;
+		}
+		
+		// $list = $breakingNews->order ( $orderby )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
+		
+		for($i = 0; $i < count ( $list ); $i ++) {
+			switch ($list [$i] ['breakingnewstype']) {
+				case 1 :
+					$list [$i] ['breakingnewstype'] = "新聞";
+					break;
+				case 2 :
+					$list [$i] ['breakingnewstype'] = "留學考試區";
+					break;
+				case 3 :
+					$list [$i] ['breakingnewstype'] = "世界排名一覽";
+					break;
+				case 4 :
+					$list [$i] ['breakingnewstype'] = "留學區域資料";
+					break;
+				case 5 :
+					$list [$i] ['breakingnewstype'] = "申請步驟";
+					break;
+				case 6 :
+					$list [$i] ['breakingnewstype'] = "項目費用明細";
+					break;
+				case 7 :
+					$list [$i] ['breakingnewstype'] = "常見問題";
+					break;
+				case 8 :
+					$list [$i] ['breakingnewstype'] = "遊學優勢";
+					break;
+				case 9 :
+					$list [$i] ['breakingnewstype'] = "留學案例";
+					break;
+				case 10 :
+					$list [$i] ['breakingnewstype'] = "學生之聲";
+					break;
+				default :
+					$list [$i] ['breakingnewstype'] = "NULL";
+					break;
+			}
+		}
 		
 		$this->assign ( 'list', $list ); // 赋值数据集
 		$this->assign ( 'page', $page->show () ); // 赋值分页输出
+		
+		$this->assign ( 'selectedtype', $selectedType ); // 赋值分页输出
 		
 		$editor = new \FCKeditor\FCKeditor ( 'editor' );
 		$editor->Value = ' '; // 设置默认值
@@ -65,14 +120,25 @@ class BreakingNewsController extends Controller {
 		try {
 			$breakingNews = M ( 'breakingnews' );
 			
+			$list = $breakingNews->select ();
+			
+			for($i = 0; $i < count ( $list ); $i ++) {
+				if ((($_POST ['breakingNewsType'] == 5 || $_POST ['breakingNewsType'] == 6 || $_POST ['breakingNewsType'] == 7) && ($list [$i] ['breakingnewstype'] == $_POST ['breakingNewsType']))) {
+					$this->error ( 'Adding Content ' . ' Already Exist' );
+					return;
+				}
+			}
+			
+			
+			
 			$data ['breakingNewsName'] = $_POST ['breakingNewsName'];
 			$data ['breakingNewsRelease'] = $_SESSION ['userId'];
 			$data ['breakingNewsReleaseDate'] = date ( 'Y-m-d H:i:s', time () );
 			$data ['breakingNewsPageView'] = 0;
-			$data ['breakingNewsType'] = $_POST['breakingNewsType'];
-			$data ['breakingNewsMainContent'] = $_POST['breakingNewsMainContent'];
-// 			dump($_POST ['editor']);
-// 			return ;
+			$data ['breakingNewsType'] = $_POST ['breakingNewsType'];
+			$data ['breakingNewsMainContent'] = $_POST ['breakingNewsMainContent'];
+			// dump($_POST ['editor']);
+			// return ;
 			// $data['workTendencyReleaseDate'] = $_POST['workTendencyReleaseDate'];
 			// 创建内容的html文件
 			$myFilePath = C ( 'APPLICATION_CONTENTHTML_PATH' ) . '/' . time () . rand () . '.html';
@@ -80,11 +146,32 @@ class BreakingNewsController extends Controller {
 			fwrite ( $myFile, $_POST ['editor'] );
 			fclose ( $myFile );
 			$data ['breakingNewsContentURL'] = $myFilePath;
+			
+			// 文件上传
+			$upload = new \Think\Upload (); // 实例化上传类
+			$upload->maxSize = 3145728; // 设置附件上传大小
+			$upload->exts = array (
+					'jpg',
+					'gif',
+					'png',
+					'jpeg'
+			); // 设置附件上传类型
+			$upload->rootPath = C ( 'APPLICATION_DOWNLOAD_PATH' );
+			$info = $upload->upload();
+			if (! $info) { // 上传错误提示错误信息
+				$this->error ( 'File Type Error! ' . $upload->getError () );
+			} else { // 上传成功 获取上传文件信息
+				foreach ( $info as $file ) {
+					$data ['breakingNewsURL'] = $file ['savename'];
+				}
+			}
+			
+			
 			$breakingNews->create ( $data );
-			$breakingNewsId = $breakingNews->add();
-// 			dump($activityPracticeId);
-// 			return;
-//			doLog($_SESSION ['userId'],2,'add_allActivityPractice_Id_:_' . $activityPracticeId);
+			$breakingNewsId = $breakingNews->add ();
+			// dump($activityPracticeId);
+			// return;
+			// doLog($_SESSION ['userId'],2,'add_allActivityPractice_Id_:_' . $activityPracticeId);
 			
 			$this->success ( C ( 'RELEASE_SUCCESS' ), 'allBreakingNews' );
 		} catch ( Exception $e ) {
@@ -95,17 +182,17 @@ class BreakingNewsController extends Controller {
 		if (! isset ( $_SESSION ['userId'] )) {
 			$this->error ( C ( 'LOGIN_FIRST' ) );
 		}
-		$this->assign('APPLICATION_NAME',C('APPLICATION_NAME'));
-		$this->assign('USER_ID',$_SESSION ['userId']);
-		$this->assign('CURRENT_MENU','BREAKINGNEWS');
+		$this->assign ( 'APPLICATION_NAME', C ( 'APPLICATION_NAME' ) );
+		$this->assign ( 'USER_ID', $_SESSION ['userId'] );
+		$this->assign ( 'CURRENT_MENU', 'BREAKINGNEWS' );
 		
 		$breakingNews = M ( 'breakingnews' );
 		$editBreakingNews = $breakingNews->where ( 'breakingNewsId=' . $_GET ['breakingnewsid'] )->find ();
 		
-//		doLog($_SESSION ['userId'],3,'edit_allActivityPractice_Id_:_' . $_GET ['activitypracticeid']);
+		// doLog($_SESSION ['userId'],3,'edit_allActivityPractice_Id_:_' . $_GET ['activitypracticeid']);
 		
-// 		dump($editActivityPractice);
-// 		return;
+		// dump($editActivityPractice);
+		// return;
 		
 		$editor = new \FCKeditor\FCKeditor ( 'editor' );
 		// 从contenturl中读取信息
@@ -125,16 +212,26 @@ class BreakingNewsController extends Controller {
 		if (! isset ( $_SESSION ['userId'] )) {
 			$this->error ( C ( 'LOGIN_FIRST' ) );
 		}
-		$this->assign('APPLICATION_NAME',C('APPLICATION_NAME'));
-		$this->assign('USER_ID',$_SESSION ['userId']);
-		$this->assign('CURRENT_MENU','BREAKINGNEWS');
+		$this->assign ( 'APPLICATION_NAME', C ( 'APPLICATION_NAME' ) );
+		$this->assign ( 'USER_ID', $_SESSION ['userId'] );
+		$this->assign ( 'CURRENT_MENU', 'BREAKINGNEWS' );
 		
 		$breakingNews = M ( 'breakingnews' );
+		
+		$list = $breakingNews->select ();
+		
+		for($i = 0; $i < count ( $list ); $i ++) {
+			if ((($_POST ['breakingNewsType'] == 5 || $_POST ['breakingNewsType'] == 6 || $_POST ['breakingNewsType'] == 7) && ($list [$i] ['breakingnewstype'] == $_POST ['breakingNewsType']))) {
+				$this->error ( 'Adding Content ' . ' Already Exist' );
+				return;
+			}
+		}
+		
 		$data ['breakingNewsId'] = $_GET ['breakingnewsid'];
 		$data ['breakingNewsName'] = $_POST ['breakingNewsName'];
 		$data ['breakingNewsType'] = $_POST ['breakingNewsType'];
 		$data ['breakingNewsMainContent'] = $_POST ['breakingNewsMainContent'];
-
+		
 		$myFilePath = C ( 'APPLICATION_CONTENTHTML_PATH' ) . '/' . time () . rand () . '.html';
 		$myFile = fopen ( $myFilePath, "w" ) or die ( "Unable to open file!" );
 		fwrite ( $myFile, $_POST ['editor'] );
@@ -143,7 +240,7 @@ class BreakingNewsController extends Controller {
 		// $workTendency-> where('workTendencyId=' . $_GET['worktendencyid'])->setField('worktendencycontenturl',$myFilePath);
 		$result = $breakingNews->save ( $data );
 		
-		//doLog($_SESSION ['userId'],4,'edit_allActivityPractice_Submit_Id_:_' . $_GET ['activitypracticeid']);
+		// doLog($_SESSION ['userId'],4,'edit_allActivityPractice_Submit_Id_:_' . $_GET ['activitypracticeid']);
 		
 		if ($result !== false) {
 			// echo U('WorkTendency/allPage');

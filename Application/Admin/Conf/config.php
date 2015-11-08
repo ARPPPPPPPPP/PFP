@@ -17,7 +17,7 @@ return array (
 		'DELETE_FAIL' => 'Delete Failed ! ',
 		'EDIT_SUCCESS' => 'Edit Succeed ! ',
 		'EDIT_FAIL' => 'Edit Failed ! ',
-		'PAGE_COUNT' => 5,
+		'PAGE_COUNT' => 15,
 		'ADD_SUCCESS' => 'Add Succeed ! ',
 		'ADD_FAIL' => 'Add Failed ! ',
 		

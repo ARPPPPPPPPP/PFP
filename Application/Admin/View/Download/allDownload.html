@@ -45,15 +45,15 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>DownloadTitle</th>
-									<th>DownloadReleaseDate</th>
-									<th>DoanloadPageView</th>
-									<th>DownloadURL</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="20%">DownloadTitle</th>
+									<th width="20%">DownloadReleaseDate</th>
+									<th width="20%">DoanloadPageView</th>
+									<th width="20%">DownloadURL</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -72,9 +72,9 @@
 								<tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='{$item[downloadid]}' /></td>
-									<td>{$item[downloadtitle]}</td>
-									<td>{$item[downloadreleasedate]}</td>
-									<td>{$item[downloadpageview]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[downloadtitle]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[downloadreleasedate]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[downloadpageview]}</td>
 									<td><a
 										href="__PUBLIC__/Download/{$item[downloadreleasedate]|substr=0,10}/{$item[downloadurl]}">{$item[filename]}</a></td>
 									<td><a

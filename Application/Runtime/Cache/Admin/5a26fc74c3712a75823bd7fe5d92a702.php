@@ -45,7 +45,7 @@
 		<li><a href="<?php echo U('Login/home');?>"<?php if($CURRENT_MENU == 'HOME'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>Home</a></li>
 		<li><a href="<?php echo U('BreakingNews/allBreakingNews');?>"<?php if($CURRENT_MENU == 'BREAKINGNEWS'): ?>class="nav-top-item no-submenu current" <?php else: ?>
-				class="nav-top-item no-submenu"<?php endif; ?>>BreakingNews</a></li>
+				class="nav-top-item no-submenu"<?php endif; ?>>EditContent</a></li>
 		<li><a href="<?php echo U('SignUp/allSignUp');?>"<?php if($CURRENT_MENU == 'SIGNUP'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SignUp</a></li>
 		<li><a href="<?php echo U('Download/allDownload');?>"<?php if($CURRENT_MENU == 'DOWNLOAD'): ?>class="nav-top-item
@@ -76,15 +76,15 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>DownloadTitle</th>
-									<th>DownloadReleaseDate</th>
-									<th>DoanloadPageView</th>
-									<th>DownloadURL</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="20%">DownloadTitle</th>
+									<th width="20%">DownloadReleaseDate</th>
+									<th width="20%">DoanloadPageView</th>
+									<th width="20%">DownloadURL</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -102,9 +102,9 @@
 								<?php if(is_array($list)): foreach($list as $key=>$item): ?><tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='<?php echo ($item[downloadid]); ?>' /></td>
-									<td><?php echo ($item[downloadtitle]); ?></td>
-									<td><?php echo ($item[downloadreleasedate]); ?></td>
-									<td><?php echo ($item[downloadpageview]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[downloadtitle]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[downloadreleasedate]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[downloadpageview]); ?></td>
 									<td><a
 										href="/PFP/Public/Download/<?php echo (substr($item[downloadreleasedate],0,10)); ?>/<?php echo ($item[downloadurl]); ?>"><?php echo ($item[filename]); ?></a></td>
 									<td><a

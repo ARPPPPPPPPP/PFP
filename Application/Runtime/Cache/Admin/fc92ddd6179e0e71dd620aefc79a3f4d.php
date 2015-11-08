@@ -45,7 +45,7 @@
 		<li><a href="<?php echo U('Login/home');?>"<?php if($CURRENT_MENU == 'HOME'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>Home</a></li>
 		<li><a href="<?php echo U('BreakingNews/allBreakingNews');?>"<?php if($CURRENT_MENU == 'BREAKINGNEWS'): ?>class="nav-top-item no-submenu current" <?php else: ?>
-				class="nav-top-item no-submenu"<?php endif; ?>>BreakingNews</a></li>
+				class="nav-top-item no-submenu"<?php endif; ?>>EditContent</a></li>
 		<li><a href="<?php echo U('SignUp/allSignUp');?>"<?php if($CURRENT_MENU == 'SIGNUP'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SignUp</a></li>
 		<li><a href="<?php echo U('Download/allDownload');?>"<?php if($CURRENT_MENU == 'DOWNLOAD'): ?>class="nav-top-item
@@ -76,14 +76,14 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>HomePictureName</th>
-									<th>HomePictureReleaseDate</th>
-									<th>HomePictureContentURL</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="40%">HomePictureName</th>
+									<th width="40%">HomePictureReleaseDate</th>
+									<th width="40%">HomePictureContentURL</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -101,9 +101,9 @@
 								<?php if(is_array($list)): foreach($list as $key=>$item): ?><tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='<?php echo ($item[homepictureid]); ?>' /></td>
-									<td><?php echo ($item[homepicturename]); ?></td>
-									<td><?php echo ($item[homepicturereleasedate]); ?></td>
-									<td><?php echo ($item[homepicturecontenturl]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturename]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturereleasedate]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturecontenturl]); ?></td>
 									<td><a
 										href="<?php echo U('HomePicture/editHomePicture','homepictureid=' . $item[homepictureid]);?>"
 										title="Edit" target="_blank"><img

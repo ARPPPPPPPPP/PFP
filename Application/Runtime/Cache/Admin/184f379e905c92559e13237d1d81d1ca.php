@@ -45,7 +45,7 @@
 		<li><a href="<?php echo U('Login/home');?>"<?php if($CURRENT_MENU == 'HOME'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>Home</a></li>
 		<li><a href="<?php echo U('BreakingNews/allBreakingNews');?>"<?php if($CURRENT_MENU == 'BREAKINGNEWS'): ?>class="nav-top-item no-submenu current" <?php else: ?>
-				class="nav-top-item no-submenu"<?php endif; ?>>BreakingNews</a></li>
+				class="nav-top-item no-submenu"<?php endif; ?>>EditContent</a></li>
 		<li><a href="<?php echo U('SignUp/allSignUp');?>"<?php if($CURRENT_MENU == 'SIGNUP'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SignUp</a></li>
 		<li><a href="<?php echo U('Download/allDownload');?>"<?php if($CURRENT_MENU == 'DOWNLOAD'): ?>class="nav-top-item
@@ -64,7 +64,7 @@
 			<div class="content-box">
 				<!-- Start Content Box -->
 				<div class="content-box-header">
-					<h3>BreakingNews</h3>
+					<h3>EditContent</h3>
 					<ul class="content-box-tabs">
 						<li><a href="#tab1" class="default-tab">List</a></li>
 						<!-- href must be unique and match the id of target div -->
@@ -76,23 +76,63 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>NewsTitle</th>
-									<th>NewsType</th>
-									<th>NewsReleaseDate</th>
-									<th>NewsMainContent</th>
-									<th>NewsMainPageView</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="20%">ContentTitle</th>
+									<th width="20%">ContentType</th>
+									<th width="20%">ContentReleaseDate</th>
+									<th width="20%">ContentMainContent</th>
+									<th width="20%">ContentMainPageView</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<td colspan="10">
+									<td colspan="7">
 										<div class="bulk-actions align-left">
 											<a class="button" onclick="deleteMulti()">Delete Select</a>
+										</div>
+										<div class="bulk-actions align-left"></div>
+										<div class="bulk-actions align-left">
+											<label>&nbsp;&nbsp;&nbsp;Type</label> <select id="selectType"
+												class="small-input"
+												onChange="selectedTypeChanged(this.value)">
+												<?php if($selectedtype == all): ?><option value="all" selected="selected">ALL</option>
+												<?php else: ?>
+												<option value="all">ALL</option><?php endif; ?>
+												<?php if($selectedtype == 1): ?><option value="1" selected="selected">新聞</option>
+												<?php else: ?>
+												<option value="1">新聞</option><?php endif; ?>
+												<?php if($selectedtype == 2): ?><option value="2" selected="selected">留學考試區</option>
+												<?php else: ?>
+												<option value="2">留學考試區</option><?php endif; ?>
+												<?php if($selectedtype == 3): ?><option value="3" selected="selected">世界排名一覽</option>
+												<?php else: ?>
+												<option value="3">世界排名一覽</option><?php endif; ?>
+												<?php if($selectedtype == 4): ?><option value="4" selected="selected">留學區域資料</option>
+												<?php else: ?>
+												<option value="4">留學區域資料</option><?php endif; ?>
+												<?php if($selectedtype == 5): ?><option value="5" selected="selected">申請步驟</option>
+												<?php else: ?>
+												<option value="5">申請步驟</option><?php endif; ?>
+												<?php if($selectedtype == 6): ?><option value="6" selected="selected">項目費用明細</option>
+												<?php else: ?>
+												<option value="6">項目費用明細</option><?php endif; ?>
+												<?php if($selectedtype == 7): ?><option value="7" selected="selected">常見問題</option>
+												<?php else: ?>
+												<option value="7">常見問題</option><?php endif; ?>
+												<?php if($selectedtype == 8): ?><option value="8" selected="selected">遊學優勢</option>
+												<?php else: ?>
+												<option value="8">遊學優勢</option><?php endif; ?>
+												<?php if($selectedtype == 9): ?><option value="9" selected="selected">留學案例</option>
+												<?php else: ?>
+												<option value="9">留學案例</option><?php endif; ?>
+												<?php if($selectedtype == 10): ?><option value="10" selected="selected">學生之聲</option>
+												<?php else: ?>
+												<option value="10">學生之聲</option><?php endif; ?>
+											</select>
 										</div>
 										<div class="pagination"><?php echo ($page); ?></div> <!-- End .pagination -->
 										<div class="clear"></div>
@@ -103,11 +143,16 @@
 								<?php if(is_array($list)): foreach($list as $key=>$item): ?><tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='<?php echo ($item[breakingnewsid]); ?>' /></td>
-									<td><?php echo ($item[breakingnewsname]); ?></td>
-									<td><?php echo ($item[breakingnewstype]); ?></td>
-									<td><?php echo ($item[breakingnewsreleasedate]); ?></td>
-									<td><?php echo ($item[breakingnewsmaincontent]); ?></td>
-									<td><?php echo ($item[breakingnewspageview]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[breakingnewsname]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[breakingnewstype]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[breakingnewsreleasedate]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[breakingnewsmaincontent]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[breakingnewspageview]); ?></td>
 									<td><a
 										href="<?php echo U('BreakingNews/editBreakingNews','breakingnewsid=' . $item[breakingnewsid]);?>"
 										title="Edit" target="_blank"><img
@@ -124,26 +169,41 @@
 					</div>
 					<!-- End #tab1 -->
 					<div class="tab-content" id="tab2">
-						<form action="<?php echo U('BreakingNews/addBreakingNews');?>" method="post">
+						<form action="<?php echo U('BreakingNews/addBreakingNews');?>" enctype="multipart/form-data" method="post">
 							<fieldset>
 								<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
 								<p>
-									<label>BreakingNewsTitle</label> <input
+									<label>ContentTitle</label> <input
 										class="text-input medium-input datepicker" type="text"
 										id="medium-input" name="breakingNewsName" /> <br />
 								</p>
 								<p>
-									<label>BreakingNewsType</label> <input
-										class="text-input medium-input datepicker" type="text"
-										id="medium-input" name="breakingNewsType" /> <br />
+									<label>ContentType</label><select name="breakingNewsType"
+										class="small-input">
+										<option value="1" selected="selected">新聞</option>
+										<option value="2">留學考試區</option>
+										<option value="3">世界排名一覽</option>
+										<option value="4">留學區域資料</option>
+										<option value="5">申請步驟</option>
+										<option value="6">項目費用明細</option>
+										<option value="7">常見問題</option>
+										<option value="8">遊學優勢</option>
+										<option value="9">留學案例</option>
+										<option value="10">學生之聲</option>
+									</select> <br />
 								</p>
 								<p>
-									<label>BreakingNewsMainContent</label> <input
+									<label>ContentAbstract</label> <input
 										class="text-input medium-input datepicker" type="text"
 										id="medium-input" name="breakingNewsMainContent" /> <br />
 								</p>
 								<p>
-									<label>BreakingNewsContent</label>
+									<label>Picture (學生之聲)</label> <input
+										class="text-input medium-input datepicker" type="file"
+										id="medium-input" name="breakingNewsURL" /> <br />
+								</p>
+								<p>
+									<label>ContentContent</label>
 									<div style='height: 600px'><?php echo ($editorHtml); ?></div>
 								</p>
 								<p>
@@ -175,5 +235,10 @@
 			window.location = "<?php echo U('BreakingNews/allBreakingNews','deleteMulti=-1');?>"
 					+ "," + value.toString();
 		}
+	}
+
+	function selectedTypeChanged(value) {
+		window.location = "<?php echo U('BreakingNews/allBreakingNews');?>"
+				+ "?selectedType=" + value;
 	}
 </script>

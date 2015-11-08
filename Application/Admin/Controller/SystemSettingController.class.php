@@ -43,12 +43,34 @@ class SystemSettingController extends Controller {
 			return;
 		}
 		
-		// 查询当前所有的工作状态并且分页
 		$count = $systemSetting->count ();
 		$page = new \Think\Page ( $count, C ( 'PAGE_COUNT' ), 'p1' );
 		$page->setP ( 'p1' );
 		$orderby ['systemsettingid'] = 'desc';
 		$list = $systemSetting->order ( $orderby )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
+		
+		for($i = 0; $i < count ( $list ); $i ++) {
+			switch($list [$i] ['systemsettingname']){
+				case 1:
+					$list [$i] ['systemsettingname'] = "遊學優勢標題";
+					break;
+				case 2:
+					$list [$i] ['systemsettingname'] = "遊學優勢內容";
+					break;
+				case 3:
+					$list [$i] ['systemsettingname'] = "酒店鏈接";
+					break;
+				case 4:
+					$list [$i] ['systemsettingname'] = "聯繫方式電話";
+					break;
+				case 5:
+					$list [$i] ['systemsettingname'] = "聯繫方式郵箱";
+					break;
+				default:
+					$list [$i] ['systemsettingname'] = "NULL";
+					break;
+			}
+		}
 		
 		// dump($list);
 		// return;
@@ -68,7 +90,7 @@ class SystemSettingController extends Controller {
 // 			dump($list);
 			for($i = 0; $i < count ( $list ); $i ++) {
 				if ($list [$i] ['systemsettingname'] == $_POST ['systemsettingname']) {
-					$this->error ( 'SystemSetting : ' . $_POST ['systemsettingname'] . ' Already Exist' , 'systemSetting' );
+					$this->error ( 'Adding SystemSetting ' . ' Already Exist' , 'systemSetting' );
 					return;
 				} 
 			}

@@ -45,14 +45,14 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>HomePictureName</th>
-									<th>HomePictureReleaseDate</th>
-									<th>HomePictureContentURL</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="40%">HomePictureName</th>
+									<th width="40%">HomePictureReleaseDate</th>
+									<th width="40%">HomePictureContentURL</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -71,9 +71,9 @@
 								<tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='{$item[homepictureid]}' /></td>
-									<td>{$item[homepicturename]}</td>
-									<td>{$item[homepicturereleasedate]}</td>
-									<td>{$item[homepicturecontenturl]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturename]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturereleasedate]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturecontenturl]}</td>
 									<td><a
 										href="{:U('HomePicture/editHomePicture','homepictureid=' . $item[homepictureid])}"
 										title="Edit" target="_blank"><img

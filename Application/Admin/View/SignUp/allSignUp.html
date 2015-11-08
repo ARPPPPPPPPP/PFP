@@ -45,18 +45,18 @@
 				<div class="content-box-content">
 					<div class="tab-content default-tab" id="tab1">
 
-						<table>
+						<table style="table-layout: fixed;">
 							<thead>
 								<tr>
-									<th><input class="check-all" type="checkbox" /></th>
-									<th>SignUpName</th>
-									<th>SignUpSex</th>
-									<th>SignUpSchool</th>
-									<th>SignUpMajor</th>
-									<th>SignUpCellPhone</th>
-									<th>SignUpWeiXing</th>
-									<th>SignUpTime</th>
-									<th>Operation</th>
+									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="20%">SignUpName</th>
+									<th width="20%">SignUpSex</th>
+									<th width="20%">SignUpSchool</th>
+									<th width="20%">SignUpMajor</th>
+									<th width="20%">SignUpCellPhone</th>
+									<th width="20%">SignUpWeiXing</th>
+									<th width="20%">SignUpTime</th>
+									<th width="20%">Operation</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -75,13 +75,13 @@
 								<tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='{$item[signupid]}' /></td>
-									<td>{$item[signupname]}</td>
-									<td>{$item[signupsex]}</td>
-									<td>{$item[signupschool]}</td>
-									<td>{$item[signupmajor]}</td>
-									<td>{$item[signupcellphone]}</td>
-									<td>{$item[signupweixing]}</td>
-									<td>{$item[signuptime]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupname]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupsex]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupschool]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupmajor]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupcellphone]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signupweixing]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[signuptime]}</td>
 									<td><a
 										href="{:U('SignUp/editSignUp','signupid=' . $item[signupid])}"
 										title="Edit" target="_blank"><img

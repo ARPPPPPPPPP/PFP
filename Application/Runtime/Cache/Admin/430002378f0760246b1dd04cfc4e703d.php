@@ -29,7 +29,7 @@
 		<div class="content-box">
 			<!-- Start Content Box -->
 			<div class="content-box-header">
-				<h3>Edit BreakingNews:<?php echo ($breakingNews['breakingnewsname']); ?></h3>
+				<h3>Edit Content:<?php echo ($breakingNews['breakingnewsname']); ?></h3>
 				<ul class="content-box-tabs">
 					<li><a href="#tab2">Edit</a></li>
 				</ul>
@@ -43,25 +43,61 @@
 					<fieldset>
 						<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
 						<p>
-							<label>BreakingNews Title</label> <input
+							<label>Content Title</label> <input
 								class="text-input medium-input datepicker" type="text"
 								id="medium-input" name="breakingNewsName"
 								value="<?php echo ($breakingNews['breakingnewsname']); ?>" /> <br />
 						</p>
 						<p>
-							<label>BreakingNews Type</label> <input
-								class="text-input medium-input datepicker" type="text"
-								id="medium-input" name="breakingNewsType"
-								value="<?php echo ($breakingNews['breakingnewstype']); ?>" /> <br />
+							<label>Content Type</label> <select id="selectType"
+								name="breakingNewsType" class="small-input">
+								<?php if($breakingNews['breakingnewstype'] == all): ?><option value="all" selected="selected">ALL</option>
+								<?php else: ?>
+								<option value="all">ALL</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 1): ?><option value="1" selected="selected">新聞</option>
+								<?php else: ?>
+								<option value="1">新聞</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 2): ?><option value="2" selected="selected">留學考試區</option>
+								<?php else: ?>
+								<option value="2">留學考試區</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 3): ?><option value="3" selected="selected">世界排名一覽</option>
+								<?php else: ?>
+								<option value="3">世界排名一覽</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 4): ?><option value="4" selected="selected">留學區域資料</option>
+								<?php else: ?>
+								<option value="4">留學區域資料</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 5): ?><option value="5" selected="selected">申請步驟</option>
+								<?php else: ?>
+								<option value="5">申請步驟</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 6): ?><option value="6" selected="selected">項目費用明細</option>
+								<?php else: ?>
+								<option value="6">項目費用明細</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 7): ?><option value="7" selected="selected">常見問題</option>
+								<?php else: ?>
+								<option value="7">常見問題</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 8): ?><option value="8" selected="selected">遊學優勢</option>
+								<?php else: ?>
+								<option value="8">遊學優勢</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 9): ?><option value="9" selected="selected">留學案例</option>
+								<?php else: ?>
+								<option value="9">留學案例</option><?php endif; ?>
+								<?php if($breakingNews['breakingnewstype'] == 10): ?><option value="10" selected="selected">學生之聲</option>
+								<?php else: ?>
+								<option value="10">學生之聲</option><?php endif; ?>
+							</select> <br />
 						</p>
 						<p>
-							<label>BreakingNews MainContent</label> <input
+							<label>Content MainContent</label> <input
 								class="text-input medium-input datepicker" type="text"
 								id="medium-input" name="breakingNewsMainContent"
 								value="<?php echo ($breakingNews['breakingnewsmaincontent']); ?>" /> <br />
 						</p>
 						<p>
-							<label>BreakingNews Content</label>
+							<label>Picture</label> <a
+								href="/PFP/Public/Download/<?php echo (substr($breakingNews[breakingnewsreleasedate],0,10)); ?>/<?php echo ($breakingNews[breakingnewsurl]); ?>"><?php echo ($breakingNews[breakingnewsurl]); ?></a>
+						</p>
+						<p>
+							<label>Content Content</label>
 							<div style='height: 600px'><?php echo ($editorHtml); ?></div>
 						</p>
 						<p>

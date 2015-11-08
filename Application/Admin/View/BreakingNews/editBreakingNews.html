@@ -29,7 +29,7 @@
 		<div class="content-box">
 			<!-- Start Content Box -->
 			<div class="content-box-header">
-				<h3>Edit BreakingNews:{$breakingNews['breakingnewsname']}</h3>
+				<h3>Edit Content:{$breakingNews['breakingnewsname']}</h3>
 				<ul class="content-box-tabs">
 					<li><a href="#tab2">Edit</a></li>
 				</ul>
@@ -43,25 +43,83 @@
 					<fieldset>
 						<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
 						<p>
-							<label>BreakingNews Title</label> <input
+							<label>Content Title</label> <input
 								class="text-input medium-input datepicker" type="text"
 								id="medium-input" name="breakingNewsName"
 								value="{$breakingNews['breakingnewsname']}" /> <br />
 						</p>
 						<p>
-							<label>BreakingNews Type</label> <input
-								class="text-input medium-input datepicker" type="text"
-								id="medium-input" name="breakingNewsType"
-								value="{$breakingNews['breakingnewstype']}" /> <br />
+							<label>Content Type</label> <select id="selectType"
+								name="breakingNewsType" class="small-input">
+								<if condition="$breakingNews['breakingnewstype'] eq all">
+								<option value="all" selected="selected">ALL</option>
+								<else />
+								<option value="all">ALL</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 1">
+								<option value="1" selected="selected">新聞</option>
+								<else />
+								<option value="1">新聞</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 2">
+								<option value="2" selected="selected">留學考試區</option>
+								<else />
+								<option value="2">留學考試區</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 3">
+								<option value="3" selected="selected">世界排名一覽</option>
+								<else />
+								<option value="3">世界排名一覽</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 4">
+								<option value="4" selected="selected">留學區域資料</option>
+								<else />
+								<option value="4">留學區域資料</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 5">
+								<option value="5" selected="selected">申請步驟</option>
+								<else />
+								<option value="5">申請步驟</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 6">
+								<option value="6" selected="selected">項目費用明細</option>
+								<else />
+								<option value="6">項目費用明細</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 7">
+								<option value="7" selected="selected">常見問題</option>
+								<else />
+								<option value="7">常見問題</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 8">
+								<option value="8" selected="selected">遊學優勢</option>
+								<else />
+								<option value="8">遊學優勢</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 9">
+								<option value="9" selected="selected">留學案例</option>
+								<else />
+								<option value="9">留學案例</option>
+								</if>
+								<if condition="$breakingNews['breakingnewstype'] eq 10">
+								<option value="10" selected="selected">學生之聲</option>
+								<else />
+								<option value="10">學生之聲</option>
+								</if>
+							</select> <br />
 						</p>
 						<p>
-							<label>BreakingNews MainContent</label> <input
+							<label>Content MainContent</label> <input
 								class="text-input medium-input datepicker" type="text"
 								id="medium-input" name="breakingNewsMainContent"
 								value="{$breakingNews['breakingnewsmaincontent']}" /> <br />
 						</p>
 						<p>
-							<label>BreakingNews Content</label>
+							<label>Picture (學生之聲)</label> <a
+								href="__PUBLIC__/Download/{$breakingNews[breakingnewsreleasedate]|substr=0,10}/{$breakingNews[breakingnewsurl]}">{$breakingNews[breakingnewsurl]}</a>
+						</p>
+						<p>
+							<label>Content Content</label>
 							<div style='height: 600px'>{$editorHtml}</div>
 						</p>
 						<p>

@@ -45,7 +45,7 @@
 		<li><a href="<?php echo U('Login/home');?>"<?php if($CURRENT_MENU == 'HOME'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>Home</a></li>
 		<li><a href="<?php echo U('BreakingNews/allBreakingNews');?>"<?php if($CURRENT_MENU == 'BREAKINGNEWS'): ?>class="nav-top-item no-submenu current" <?php else: ?>
-				class="nav-top-item no-submenu"<?php endif; ?>>BreakingNews</a></li>
+				class="nav-top-item no-submenu"<?php endif; ?>>EditContent</a></li>
 		<li><a href="<?php echo U('SignUp/allSignUp');?>"<?php if($CURRENT_MENU == 'SIGNUP'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SignUp</a></li>
 		<li><a href="<?php echo U('Download/allDownload');?>"<?php if($CURRENT_MENU == 'DOWNLOAD'): ?>class="nav-top-item
@@ -128,14 +128,13 @@
 								<p>
 									<label>SystemSettingName</label> <select
 										name="systemsettingname" class="small-input">
-										<option value="遊學優勢標題" selected="selected">遊學優勢標題</option>
-										<option value="遊學優勢內容">遊學優勢內容</option>
-										<option value="酒店鏈接">酒店鏈接</option>
-										<option value="申請步驟">申請步驟</option>
-										<option value="項目費用明細">項目費用明細</option>
-										<option value="常見問題">常見問題</option>
-										<option value="聯繫方式電話">聯繫方式電話</option>
-										<option value="聯繫方式郵箱">聯繫方式郵箱</option>
+										<!-- 
+										<option value="1" selected="selected">遊學優勢標題</option>
+										<option value="2">遊學優勢內容</option>
+										 -->
+										<option value="3" selected="selected">酒店鏈接</option>
+										<option value="4">聯繫方式電話</option>
+										<option value="5">聯繫方式郵箱</option>
 									</select> <br />
 								</p>
 								<p>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ($APPLICATION_NAME); ?>系统后台</title>
+<title><?php echo ($APPLICATION_NAME); ?> System</title>
 <!--                       CSS                       -->
 <!-- Reset Stylesheet -->
 <link rel="stylesheet" type="text/css" href="/PFP/Public/resources/css/reset.css" />
@@ -32,14 +32,15 @@
 <div id="sidebar-wrapper">
 	<!-- Logo (221px wide) -->
 	<img id="logo" src="/PFP/Public/resources/images/logo.JPG"
-		style="width: 200px; height: 200px; align:center;" alt="<?php echo ($APPLICATION_NAME); ?> System" />
+		style="width: 200px; height: 200px; align: center;"
+		alt="<?php echo ($APPLICATION_NAME); ?> System" />
 	<!-- Sidebar Profile links -->
 	<div id="profile-links">
 		Hello, <a href="<?php echo U('User/userSetting','userid=' . $USER_ID);?>"
 			title="Edit your profile"><?php echo session('userAccount');?> ! </a><br /> <br />
 		<a href="<?php echo U('User/userSetting','userid=' . $USER_ID);?>"
-			title="View the Site">AccountSetting</a> | <a href="<?php echo U('Login/logout');?>"
-			title="Sign Out">Log out</a>
+			title="View the Site">AccountSetting</a> | <a
+			href="<?php echo U('Login/logout');?>" title="Sign Out">Log out</a>
 	</div>
 	<ul id="main-nav">
 		<li><a href="<?php echo U('Login/home');?>"<?php if($CURRENT_MENU == 'HOME'): ?>class="nav-top-item
@@ -50,8 +51,10 @@
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SignUp</a></li>
 		<li><a href="<?php echo U('Download/allDownload');?>"<?php if($CURRENT_MENU == 'DOWNLOAD'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>Download</a></li>
-		<li><a href="<?php echo U('HomePicture/allHomePicture');?>"<?php if($CURRENT_MENU == 'HOMEPICTURE'): ?>class="nav-top-item
-				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>HomePagePicture</a></li>
+		<li><a href="<?php echo U('HomePicture/allHomePicture');?>"<?php if($CURRENT_MENU == 'HOMEPICTURE'): ?>class="nav-top-item no-submenu current" <?php else: ?>
+				class="nav-top-item no-submenu"<?php endif; ?>>HomePagePicture</a></li>
+		<li><a href="<?php echo U('SystemSetting/systemSetting','userid=' . $USER_ID);?>"<?php if($CURRENT_MENU == 'SYSTEM'): ?>class="nav-top-item
+				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>SystemSetting</a></li>
 		<li><a href="<?php echo U('User/userSetting','userid=' . $USER_ID);?>"<?php if($CURRENT_MENU == 'USER'): ?>class="nav-top-item
 				no-submenu current" <?php else: ?> class="nav-top-item no-submenu"<?php endif; ?>>AccountSetting</a></li>
 	</ul>
@@ -63,7 +66,7 @@
 			<div class="content-box">
 				<!-- Start Content Box -->
 				<div class="content-box-header">
-					<h3>个人设置</h3>
+					<h3>個人設置</h3>
 					<ul class="content-box-tabs">
 						<li><a href="#tab1" class="default-tab">个人设置</a></li>
 						<!-- href must be unique and match the id of target div -->
@@ -86,23 +89,23 @@
 										value="<?php echo ($tempUser[0]['useraccount']); ?>" /> <br />
 								</p>
 								<p>
-									<label>修改密码：原密码</label> <input
+									<label>修改密碼：原密碼</label> <input
 										class="text-input medium-input datepicker" type="password"
 										id="medium-input" name="exUserPassword" /> <br />
 								</p>
 								<p>
-									<label>修改密码：新密码</label> <input
+									<label>修改密碼：新密碼</label> <input
 										class="text-input medium-input datepicker" type="password"
 										id="medium-input" name="newUserPassword" /> <br />
 								</p>
 								<p>
-									<label>邮箱</label> <input
+									<label>郵箱</label> <input
 										class="text-input medium-input datepicker" type="text"
 										value="<?php echo ($tempUser[0]['usermail']); ?>" id="medium-input"
 										name="userMail" /> <br />
 								</p>
 								<p>
-									<label>创建时间</label> <input
+									<label>創建時間</label> <input
 										class="text-input medium-input datepicker" type="text"
 										value="<?php echo ($tempUser[0]['usercreatetime']); ?>" id="medium-input"
 										style="background-image:none;background-color:#ECE3E3"

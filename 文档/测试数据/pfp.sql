@@ -39,6 +39,7 @@ CREATE TABLE `pfp_breakingNews` (
   `breakingNewsReleaseDate` datetime DEFAULT NULL,
   `breakingNewsContentURL` varchar(255) NOT NULL DEFAULT '',
   `breakingNewsMainContent` varchar(255) NOT NULL DEFAULT '',
+  `breakingNewsURL` varchar(255) NOT NULL DEFAULT '',
   `breakingNewsPageView` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`breakingNewsId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
