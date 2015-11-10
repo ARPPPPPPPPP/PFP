@@ -169,7 +169,8 @@
 					</div>
 					<!-- End #tab1 -->
 					<div class="tab-content" id="tab2">
-						<form action="<?php echo U('BreakingNews/addBreakingNews');?>" enctype="multipart/form-data" method="post">
+						<form action="<?php echo U('BreakingNews/addBreakingNews');?>"
+							enctype="multipart/form-data" method="post">
 							<fieldset>
 								<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
 								<p>
@@ -191,6 +192,11 @@
 										<option value="9">留學案例</option>
 										<option value="10">學生之聲</option>
 									</select> <br />
+								</p>
+								<p>
+									<label>Content Release</label> <input
+										class="text-input medium-input datepicker" type="text"
+										id="medium-input" name="breakingNewsRelease" /> <br />
 								</p>
 								<p>
 									<label>ContentAbstract</label> <input

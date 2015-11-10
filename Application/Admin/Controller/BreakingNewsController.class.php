@@ -232,6 +232,8 @@ class BreakingNewsController extends Controller {
 		$data ['breakingNewsType'] = $_POST ['breakingNewsType'];
 		$data ['breakingNewsMainContent'] = $_POST ['breakingNewsMainContent'];
 		
+		$data ['breakingNewsRelease'] = $_POST ['breakingNewsRelease'];
+		
 		$myFilePath = C ( 'APPLICATION_CONTENTHTML_PATH' ) . '/' . time () . rand () . '.html';
 		$myFile = fopen ( $myFilePath, "w" ) or die ( "Unable to open file!" );
 		fwrite ( $myFile, $_POST ['editor'] );

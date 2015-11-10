@@ -87,13 +87,19 @@
 							</select> <br />
 						</p>
 						<p>
+							<label>Content Release</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="breakingNewsRelease"
+								value="<?php echo ($breakingNews['breakingnewsrelease']); ?>" /> <br />
+						</p>
+						<p>
 							<label>Content MainContent</label> <input
 								class="text-input medium-input datepicker" type="text"
 								id="medium-input" name="breakingNewsMainContent"
 								value="<?php echo ($breakingNews['breakingnewsmaincontent']); ?>" /> <br />
 						</p>
 						<p>
-							<label>Picture</label> <a
+							<label>Picture (學生之聲)</label> <a
 								href="/PFP/Public/Download/<?php echo (substr($breakingNews[breakingnewsreleasedate],0,10)); ?>/<?php echo ($breakingNews[breakingnewsurl]); ?>"><?php echo ($breakingNews[breakingnewsurl]); ?></a>
 						</p>
 						<p>
