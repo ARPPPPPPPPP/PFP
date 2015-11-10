@@ -73,7 +73,7 @@
 										id='{$item[homepictureid]}' /></td>
 									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturename]}</td>
 									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturereleasedate]}</td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[homepicturecontenturl]}</td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="__PUBLIC__/Download/{$item[homepicturereleasedate]|substr=0,10}/{$item[homepicturecontenturl]}">{$item[homepicturecontenturl]}</a></td>
 									<td><a
 										href="{:U('HomePicture/editHomePicture','homepictureid=' . $item[homepictureid])}"
 										title="Edit" target="_blank"><img

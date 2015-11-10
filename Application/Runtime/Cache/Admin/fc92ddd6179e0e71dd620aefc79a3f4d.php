@@ -103,7 +103,7 @@
 										id='<?php echo ($item[homepictureid]); ?>' /></td>
 									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturename]); ?></td>
 									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturereleasedate]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[homepicturecontenturl]); ?></td>
+									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="/PFP/Public/Download/<?php echo (substr($item[homepicturereleasedate],0,10)); ?>/<?php echo ($item[homepicturecontenturl]); ?>"><?php echo ($item[homepicturecontenturl]); ?></a></td>
 									<td><a
 										href="<?php echo U('HomePicture/editHomePicture','homepictureid=' . $item[homepictureid]);?>"
 										title="Edit" target="_blank"><img
