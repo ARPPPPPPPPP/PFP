@@ -5,49 +5,16 @@
     <title>腾飞教育-PST游学项目-齐聚美国常青藤</title>
     <meta name="description" content="腾飞PST游学,齐聚美国常青藤">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" id="viewport">
-
     <link rel="shortcut icon" href="/favicon.db7d7834.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.33155541.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-
-    <link rel="stylesheet" href="styles/project.b14f3ff8.css">
-    <script src="scripts/vendor/modernizr.6857963c.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/res/styles/project.b14f3ff8.css">
+    <script src="__PUBLIC__/res/scripts/vendor/modernizr.6857963c.js"></script>
 
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-  <!--header nav-->
-    <div class="header">
-        <div class="navbar  navbar-default navbar-fixed-top">
-            <div class="container">
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                     <a  href="#"><img  class="logo" src="images/logo.png" alt="pal logo"></a>
-                 </div>
-                 <div id="navbar" class="navbar-collapse collapse" >
-                      <ul class="nav navbar-nav navbar-right">
-                         <li><a href="index.html">首页</a></li>
-                         <li><a href="pfp.html">PFP香港项目</a></li>
-                         <li><a href="pst.html">PST游学项目</a></li>
-                         <li><a href="schedule.html">日程安排</a></li>
-                          <li><a href="studyabroad.html">留学服务</a></li>
-                         <li><a href="guide.html">申请指南</a></li>
-                         <li><a class="navbar-pal-btn" href="application.html">在线申请</a></li>
-                      </ul>
-                 </div>
-            </div>
-        </div>
-    </div>
-
+  <!--引入头部-->
+  <include file="Layout/header"/>
     <!--内容区-->
     <div class="content">
       <div class="container">
@@ -170,142 +137,35 @@
               <h3>Advantage</h3>
             </div>
             <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-              <!--内部定制，与时俱进-->
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading1">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                      内部定制，与时俱进
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
-                  <div class="panel-body">
-                      PFP是由企业内部直接制定全方位的培训课程，导师全程跟陪。整个项目由腾飞资深HR顾问及香港金融名企高层顾问精心设计，每一期的项目结束后，项目顾问都会积累经验，不断地改善项目内容设置，与时俱进，并根据学员的不同背景和情况，为每一位学员量身打造合适的培训计划，一定让每位学员学有所得。
+                <foreach name="list" item="item">
+                  <div class="panel {$item[color]}">
+                    <div class="panel-heading" role="tab" id="{$item[id]}">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="{$item[href]}" aria-expanded="true" aria-controls="{$item[collapse]}">
+                          {$item[breakingnewsname]}
+                        </a>
+                      </h4>
+                    </div>
+                      <if condition="$item[id] eq 0 ">
+                          <div id="{$item[collapse]}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{$item[id]}">
+                              <div class="panel-body">{$item[breakingnewsmaincontent]}</div>
+                          </div>
+                              <else/>
+                          <div id="{$item[collapse]}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{$item[id]}">
+                              <div class="panel-body">{$item[breakingnewsmaincontent]}</div>
+                          </div>
+                      </if>
                   </div>
-                </div>
-              </div>
-              <!--投资银行体验-->
-              <div class="panel panel-success">
-                <div class="panel-heading" role="tab" id="heading2">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                      投资银行体验
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading2">
-                  <div class="panel-body">
-                     在众多行业中，私人投资银行公认为门槛最高的行业之一，香港作为备受瞩目的金融都市，全球各大投资银行均将香港作为业务分区的重中之重，在目前同类型项目中，仅有腾飞项目提供境外投资银行工作体验与workshop。
-                  </div>
-                </div>
-              </div>
-              <!--口碑最好-->
-              <div class="panel panel-primary">
-                <div class="panel-heading" role="tab" id="heading3">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                      口碑最好
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-                  <div class="panel-body">
-                      参加腾飞香港商业体验项目的校友中，有70%的参与者在项目结束之后自愿加入腾飞领袖俱乐部，与腾飞公司共同宣传腾飞文化。
-                  </div>
-                </div>
-              </div>
-              <!--注重实用-->
-              <div class="panel panel-danger">
-                <div class="panel-heading" role="tab" id="heading4">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                     注重实用
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
-                  <div class="panel-body">
-                     腾飞项目邀请香港资深的HR顾问和金融高层就金融方面的人才储备及职业发展给予建议，从需求方下手，结合人才储备与职业发展方面相关的人力资源管理模块，对项目进行设计，求职workshop，投资竞赛等模块还是着重于学院的能力培养。
-                  </div>
-                </div>
-              </div>
-              <!--价格公道-->
-              <div class="panel panel-info">
-                <div class="panel-heading" role="tab" id="heading5">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                      价格公道
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
-                  <div class="panel-body">
-                    腾飞公司通过完善的企业管理，与合作伙伴长期稳定的合作关系以及科学的成本管理，以公道的价格吸引优秀的高校精英参与腾飞香港商业体验项目。
-                  </div>
-                </div>
-              </div>
+                </foreach>
             </div>
             <!--end-->
           </div>
         </div>
       </div>
     </div>
-
-
-     <!--底部-->
-    <div class="footer">
-      <div class="container">
-        <h3>联系我们</h3>
-        <!--地址-->
-        <address>
-          <strong><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Address</strong><br>
-          UNIT 1104A，11/F，KAI TAK COMM. BLDG. 317-319 DES VOEUX ROAD, CENTRAL, HONG KONG<br>
-          香港上环德辅路中317-319号启德商业大厦11楼1104A室<br>
-        </address>
-        <!--微信公共号-->
-        <address>
-          <strong><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>WeChat ID</strong><br>
-          <h4>Wechat Official Account</h4>
-          <img src="images/pal.png" alt="pal微信二维码"><br>
-          <h4>Mentor Isaac</h4>
-          <img src="images/Issac.png" alt="Issac微信二维码"><br>
-          <h4>CS Phyllis</h4>
-          <img src="images/Phyllis.png" alt="Phyllis微信二维码">
-        </address>
-        <!--电话-->
-        <address>
-          <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-          Phone:<br>
-          HongKong TEL：+（852）37570899 <br>
-          China TEL：+（86）15913179974 <br>
-        </address>
-
-        <!--email-->
-        <address>
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <strong>Email</strong><br>
-          Email: admin@palhk.co
-        </address>
-
-      </div>
-    </div>
-
-
-
-    <script src="scripts/vendor.8ea373f3.js"></script>
-
-    <script src="scripts/plugins.19a1d77b.js"></script>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
+    <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
+    <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
   </body>
 </html>

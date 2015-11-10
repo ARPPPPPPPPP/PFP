@@ -23,91 +23,91 @@
           <h3>Application Form</h3>
         </div>
         <div class="application">
-            <form>
+            <form action="{:U('SignUp/addSignUp')}" method="post">
               <label>申请项目*</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pro"  value="option1">
+                  <input type="radio" name="signupproject"  value="PFP金融实习">
                   PFP金融实习
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pro"  value="option2">
+                  <input type="radio" name="signupproject"  value="PST游学项目">
                   PST游学项目
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="pro"  value="option2">
+                  <input type="radio" name="signupproject"  value="留学申请服务">
                   留学申请服务
                 </label>
               </div>
               <div class="form-group">
                 <label>留学区域意愿*（如是留学申请，请务必填写）</label>
-                <input type="text" class="form-control"  placeholder="美国，加拿大，澳大利亚，英国">
+                <input type="text"  name="signuparea" class="form-control"  placeholder="美国，加拿大，澳大利亚，英国">
               </div>
               <div class="form-group">
                 <label>姓名*（例：张小明）</label>
-                <input type="text" class="form-control"  placeholder="张小明">
+                <input type="text" name="signupname" class="form-control"  placeholder="张小明">
               </div>
               <label>性别*</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <input type="radio" name="signupsex" id="optionsRadios1" value="男">
                   男
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="signupsex" id="optionsRadios2" value="女">
                   女
                 </label>
               </div>
               <div class="form-group">
                 <label>出生日期*</label>
-                <input type="text" class="form-control"  name="birthday" placeholder="1991-01-01">
+                <input type="text" class="form-control"  name="signupbirthday" placeholder="1991-01-01">
               </div>
               <div class="form-group">
                 <label>学校*</label>
-                <input type="text" class="form-control"  name="phone">
+                <input type="text" class="form-control"  name="signupschool">
               </div>
               <div class="form-group">
                 <label>专业*</label>
-                <input type="text" class="form-control"  name="phone">
+                <input type="text" class="form-control"  name="signupmajor">
               </div>
               <div class="form-group">
                 <label>年级*</label>
-                <input type="text" class="form-control"  name="phone">
+                <input type="text" class="form-control"  name="signupgradeyear">
               </div>
               <div class="form-group">
                 <label>手机*</label>
-                <input type="tel" class="form-control"  name="phone">
+                <input type="tel" class="form-control"  name="signupcellphone">
               </div>
               <div class="form-group">
                 <label>E-mail*（用于收发录取信息，须填写常用邮箱）</label>
-                <input type="email" class="form-control"  name="phone">
+                <input type="email" class="form-control"  name="signupmail">
               </div>
               <div class="form-group">
                 <label>微信*</label>
-                <input type="text" class="form-control"  name="phone">
+                <input type="text" class="form-control"  name="signupweixing">
               </div>
               <div class="form-group">
                 <label>推荐人</label>
-                <input type="text" class="form-control"  name="phone">
+                <input type="text" class="form-control"  name="signupreferee">
               </div>
               <div class="form-group">
                 <label>身份证号码*</label>
-                <input type="text" class="form-control"  name="idcard">
+                <input type="text" class="form-control"  name="signupidcard">
               </div>
               <div class="form-group">
                 <label>家长联系方式*</label>
-                <input type="tel" class="form-control"  name="phone">
+                <input type="tel" class="form-control"  name="signupfamilycontact">
               </div>
               <label>个人经历（校内外）</label>
-              <textarea class="form-control" rows="8"></textarea>
+              <textarea class="form-control" rows="8" name="signupaward"></textarea>
               <label>个人获奖情况（校内外）</label>
-              <textarea class="form-control" rows="8"></textarea>
+              <textarea class="form-control" rows="8" name="signupexperience"></textarea>
               <label>以上填写资料请务必真实有效，我们的工作人员会在核证后，会尽量处理您的申请！</label>
                <button type="submit" class="btn btn-default">提交</button>
             </form>

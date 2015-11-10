@@ -18,7 +18,7 @@
 
     <!--大图区-->
     <div class="bgpic">
-          <img class="bg" src="__PUBLIC__/res/images/bg-1.jpg" alt="腾飞教育">
+          <img class="bg" src="__PUBLIC__/Download/{$bgpic[homepicturereleasedate]|substr=0,10}/{$bgpic[homepicturecontenturl]}" alt="腾飞教育">
           <h1 class="slogan animated">腾飞教育</h1>
     </div>
 
@@ -58,68 +58,19 @@
             <h3>Voice of Students</h3>
           </div>
           <div class="row">
-             <!--Echo-->
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-responsive" src="__PUBLIC__/res/images/wanwen.png">
-                  <div class="caption">
-                    <h3>Vanviner</h3>
-                    <p>
-                      说起来去年寒假到香港参加PFP这个项目才是真正促进我努力争取香港理工大学exchange的最大动力。
-                      在项目过程中我真切地感受到了香港给我的第一次的气息。也许是学员们和导师们认真的态度，也许是一起努力做项目漫长困顿的深夜，也许是在项目讨论中争吵起来的我们。让我顿时有了这种想法：真的很想留在这个繁忙又有点儿拥挤却很有味道的地方感受在这儿的人们是如何生活如何学习如何工作又或者是 -- 如何生存的。
-
-                    </p>
-                    <p><a href="voice.html" class="btn btn-primary" role="button">详情</a></p>
-                  </div>
-                </div>
-             </div>
-               <!--Echo-->
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/res/images/Echo.png">
-                  <div class="caption">
-                    <h3>Echo</h3>
-                    <p>
-                      说起来去年寒假到香港参加PFP这个项目才是真正促进我努力争取香港理工大学exchange的最大动力。
-                      在项目过程中我真切地感受到了香港给我的第一次的气息。也许是学员们和导师们认真的态度，也许是一起努力做项目漫长困顿的深夜，也许是在项目讨论中争吵起来的我们。让我顿时有了这种想法：真的很想留在这个繁忙又有点儿拥挤却很有味道的地方感受在这儿的人们是如何生活如何学习如何工作又或者是 -- 如何生存的。
-
-                    </p>
-                    <p><a href="voice.html" class="btn btn-primary" role="button">详情</a></p>
-                  </div>
-                </div>
-             </div>
-             <!--Echo-->
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/res/images/Jessie.png">
-                  <div class="caption">
-                    <h3>Jessie</h3>
-                    <p>
-                      说起来去年寒假到香港参加PFP这个项目才是真正促进我努力争取香港理工大学exchange的最大动力。
-                      在项目过程中我真切地感受到了香港给我的第一次的气息。也许是学员们和导师们认真的态度，也许是一起努力做项目漫长困顿的深夜，也许是在项目讨论中争吵起来的我们。让我顿时有了这种想法：真的很想留在这个繁忙又有点儿拥挤却很有味道的地方感受在这儿的人们是如何生活如何学习如何工作又或者是 -- 如何生存的。
-
-                    </p>
-                    <p><a href="voice.html" class="btn btn-primary" role="button">详情</a></p>
-                  </div>
-                </div>
-             </div>
-
-              <!--Echo-->
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/res/images/Laura.png">
-                  <div class="caption">
-                    <h3>Laura</h3>
-                    <p>
-                      说起来去年寒假到香港参加PFP这个项目才是真正促进我努力争取香港理工大学exchange的最大动力。
-                      在项目过程中我真切地感受到了香港给我的第一次的气息。也许是学员们和导师们认真的态度，也许是一起努力做项目漫长困顿的深夜，也许是在项目讨论中争吵起来的我们。让我顿时有了这种想法：真的很想留在这个繁忙又有点儿拥挤却很有味道的地方感受在这儿的人们是如何生活如何学习如何工作又或者是 -- 如何生存的。
-
-                    </p>
-                    <p><a href="voice.html" class="btn btn-primary" role="button">详情</a></p>
-                  </div>
-                </div>
-             </div>
-
+              <foreach name="voices" item="item">
+                 <!--Echo-->
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                      <img class="img-responsive" src="__PUBLIC__/Download/{$item[breakingnewsreleasedate]|substr=0,10}/{$item[breakingnewsurl]}">
+                      <div class="caption">
+                        <h3>{$item[breakingnewsname]}</h3>
+                        <p>{$item[breakingnewsmaincontent]}</p>
+                        <p><a href="{:U('News/voice','breakingnewsid=' . $item[breakingnewsid])}" class="btn btn-primary" role="button">详情</a></p>
+                      </div>
+                    </div>
+                 </div>
+              </foreach>
           </div>
 
           <!--新闻区-->
@@ -127,51 +78,30 @@
             <h3>Breaking News</h3>
           </div>
           <div class="row">
-            <!--新闻1-->
-              <div class="col-sm-12 col-md-12">
-                  <article>
-                    <div class="post-head">
-                      <h1 class="post-title">新闻标题1</h1>
-                      <div class="post-meta">
-                        <span class="author">作者：<b>Mr.zhang</b></span>
-                        <time class="post-date">&nbsp;&nbsp;2015年9月26日</time>
-                      </div>
-                    </div>
-                    <div class="post-abstract">
-                      <p>记得刚开始来自各个地区的人都羞答答地介绍着自己，到后来大胆着展示着连夜完成的presentation；刚开始大家还非常拘谨，到后来都称兄道弟，记得刚开始来自各个地区的人都羞答答地介绍着自己，到后来大胆着展示着连夜完成的presentation；刚开始大家还非常拘谨，到后来都称兄道弟,记得刚开始来自各个地区的人都羞答答地介绍着自己，到后来大胆着展示着连夜完成的presentation；刚开始大家还非常拘谨，到后来都称兄道弟</p>
-                    </div>
-                    <div class="post-footer">
-                      <a href="news.html" class="btn btn-default">阅读全文</a>
-                    </div>
-                    <div class="post-category">
-                      <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
-                      <span class="tag">&nbsp;&nbsp;学员回馈</span>
-                    </div>
-                  </article>
-              </div>
-
-          <!--新闻2-->
-              <div class="col-sm-12 col-md-12">
-                  <article>
-                    <div class="post-head">
-                      <h1 class="post-title">新闻标题2</h1>
-                      <div class="post-meta">
-                        <span class="author">作者：<b>Mr.zhang</b></span>
-                        <time class="post-date">&nbsp;&nbsp;2015年9月26日</time>
-                      </div>
-                    </div>
-                    <div class="post-abstract">
-                      <p>记得刚开始来自各个地区的人都羞答答地介绍着自己，到后来大胆着展示着连夜完成的presentation；刚开始大家还非常拘谨，到后来都称兄道</p>
-                    </div>
-                    <div class="post-footer">
-                      <a href="news.html" class="btn btn-default">阅读全文</a>
-                    </div>
-                    <div class="post-category">
-                      <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
-                      <span class="tag">&nbsp;&nbsp;学员回馈</span>
-                    </div>
-                  </article>
-              </div>
+              <foreach name="news" item="item">
+                <!--新闻1-->
+                  <div class="col-sm-12 col-md-12">
+                      <article>
+                        <div class="post-head">
+                          <h1 class="post-title">{$item[breakingnewsname]}</h1>
+                          <div class="post-meta">
+                            <span class="author">作者：<b>{$item[breakingnewsrelease]}</b></span>
+                            <time class="post-date">&nbsp;&nbsp;{$item[breakingnewsreleasedate]}</time>
+                          </div>
+                        </div>
+                        <div class="post-abstract">
+                          <p>{$item[breakingnewsmaincontent]}</p>
+                        </div>
+                        <div class="post-footer">
+                          <a href="{:U('News/news','breakingnewsid=' . $item[breakingnewsid])}" class="btn btn-default">阅读全文</a>
+                        </div>
+                        <div class="post-category">
+                          <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                          <span class="tag">&nbsp;&nbsp;学员回馈</span>
+                        </div>
+                      </article>
+                  </div>
+              </foreach>
           </div>
 
            <div class="section">
@@ -208,10 +138,10 @@
           </div>
       </div>
     </div>
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
     <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
     <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
     <script src="__PUBLIC__/res/scripts/main.f5189193.js"></script>
-      <!--引入底部文件-->
-      <include file="Layout/footer"/>
   </body>
 </html>
