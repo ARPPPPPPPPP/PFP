@@ -130,7 +130,8 @@ class BreakingNewsController extends Controller {
 			}
 			
 			$data ['breakingNewsName'] = $_POST ['breakingNewsName'];
-			$data ['breakingNewsRelease'] = $_SESSION ['userId'];
+// 			$data ['breakingNewsRelease'] = $_SESSION ['userId'];
+			$data ['breakingNewsRelease'] = $_POST ['breakingNewsRelease'];
 			$data ['breakingNewsReleaseDate'] = date ( 'Y-m-d H:i:s', time () );
 			$data ['breakingNewsPageView'] = 0;
 			$data ['breakingNewsType'] = $_POST ['breakingNewsType'];

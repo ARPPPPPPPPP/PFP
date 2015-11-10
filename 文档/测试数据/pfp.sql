@@ -66,6 +66,8 @@ CREATE TABLE `pfp_download` (
 DROP TABLE IF EXISTS `pfp_signUp`;
 CREATE TABLE `pfp_signUp` (
   `signUpId` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `signUpProject` varchar(255) NOT NULL DEFAULT '',
+  `signUpArea` varchar(255) NOT NULL DEFAULT '',
   `signUpName` varchar(255) NOT NULL DEFAULT '',
   `signUpSex` varchar(16) NOT NULL DEFAULT '',
   `signUpBirthday` varchar(32) NOT NULL DEFAULT '',
