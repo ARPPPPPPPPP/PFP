@@ -129,8 +129,6 @@ class BreakingNewsController extends Controller {
 				}
 			}
 			
-			
-			
 			$data ['breakingNewsName'] = $_POST ['breakingNewsName'];
 			$data ['breakingNewsRelease'] = $_SESSION ['userId'];
 			$data ['breakingNewsReleaseDate'] = date ( 'Y-m-d H:i:s', time () );
@@ -154,18 +152,19 @@ class BreakingNewsController extends Controller {
 					'jpg',
 					'gif',
 					'png',
-					'jpeg'
+					'jpeg' 
 			); // 设置附件上传类型
 			$upload->rootPath = C ( 'APPLICATION_DOWNLOAD_PATH' );
-			$info = $upload->upload();
-			if (! $info) { // 上传错误提示错误信息
-				$this->error ( 'File Type Error! ' . $upload->getError () );
-			} else { // 上传成功 获取上传文件信息
-				foreach ( $info as $file ) {
-					$data ['breakingNewsURL'] = $file ['savename'];
+			$info = $upload->upload ();
+			if ($data ['breakingNewsType'] == '10') {
+				if (! $info) { // 上传错误提示错误信息
+					$this->error ( 'File Type Error! ' . $upload->getError () );
+				} else { // 上传成功 获取上传文件信息
+					foreach ( $info as $file ) {
+						$data ['breakingNewsURL'] = $file ['savename'];
+					}
 				}
 			}
-			
 			
 			$breakingNews->create ( $data );
 			$breakingNewsId = $breakingNews->add ();

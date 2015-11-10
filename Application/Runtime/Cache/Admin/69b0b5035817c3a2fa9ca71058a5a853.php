@@ -80,12 +80,12 @@
 							<thead>
 								<tr>
 									<th width="10%"><input class="check-all" type="checkbox" /></th>
+									<th width="20%">SignUpProject</th>
+									<th width="20%">SignUpArea</th>
 									<th width="20%">SignUpName</th>
 									<th width="20%">SignUpSex</th>
 									<th width="20%">SignUpSchool</th>
 									<th width="20%">SignUpMajor</th>
-									<th width="20%">SignUpCellPhone</th>
-									<th width="20%">SignUpWeiXing</th>
 									<th width="20%">SignUpTime</th>
 									<th width="20%">Operation</th>
 								</tr>
@@ -105,13 +105,20 @@
 								<?php if(is_array($list)): foreach($list as $key=>$item): ?><tr>
 									<td><input type="checkbox" name='checkboxscut'
 										id='<?php echo ($item[signupid]); ?>' /></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupname]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupsex]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupschool]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupmajor]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupcellphone]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupweixing]); ?></td>
-									<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signuptime]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupproject]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signuparea]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupname]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupsex]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupschool]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signupmajor]); ?></td>
+									<td
+										style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo ($item[signuptime]); ?></td>
 									<td><a
 										href="<?php echo U('SignUp/editSignUp','signupid=' . $item[signupid]);?>"
 										title="Edit" target="_blank"><img
@@ -131,6 +138,16 @@
 						<form action="<?php echo U('SignUp/addSignUp');?>" method="post">
 							<fieldset>
 								<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+								<p>
+									<label>SignUpProject</label> <input
+										class="text-input medium-input datepicker" type="text"
+										id="medium-input" name="signupproject" /> <br />
+								</p>
+								<p>
+									<label>SignUpArea</label> <input
+										class="text-input medium-input datepicker" type="text"
+										id="medium-input" name="signuparea" /> <br />
+								</p>
 								<p>
 									<label>SignUpName</label> <input
 										class="text-input medium-input datepicker" type="text"
@@ -192,14 +209,18 @@
 										id="medium-input" name="signupfamilycontact" /> <br />
 								</p>
 								<p>
-									<label>SignUpExperience</label> <textarea
-										class="text-input medium-input datepicker" type="text"
-										id="medium-input" name="signupexperience" style="height: 200px; overflow:auto;"></textarea> <br />
+									<label>SignUpExperience</label>
+									<textarea class="text-input medium-input datepicker"
+										type="text" id="medium-input" name="signupexperience"
+										style="height: 200px; overflow: auto;"></textarea>
+									<br />
 								</p>
 								<p>
-									<label>SignUpAward</label> <textarea
-										class="text-input medium-input datepicker" type="text"
-										id="medium-input" name="signupaward" style="height: 200px;"></textarea> <br />
+									<label>SignUpAward</label>
+									<textarea class="text-input medium-input datepicker"
+										type="text" id="medium-input" name="signupaward"
+										style="height: 200px;"></textarea>
+									<br />
 								</p>
 								<p>
 									<input class="button" type="submit" value="Submit" />

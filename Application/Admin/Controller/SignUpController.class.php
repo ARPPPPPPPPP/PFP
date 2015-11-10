@@ -61,6 +61,8 @@ class SignUpController extends Controller {
 		try {
 			$signUp = M ( 'signup' );
 			
+			$data ['signUpProject'] = $_POST ['signupproject'];
+			$data ['signUpArea'] = $_POST ['signuparea'];
 			$data ['signUpName'] = $_POST ['signupname'];
 			$data ['signUpSex'] = $_POST ['signupsex'];
 			$data ['signUpBirthday'] = $_POST ['signupbirthday'];
@@ -112,6 +114,8 @@ class SignUpController extends Controller {
 		
 		$signUp = M ( 'signup' );
 		$data ['signUpId'] = $_GET ['signupid'];
+		$data ['signUpProject'] = $_POST ['signupproject'];
+		$data ['signUpArea'] = $_POST ['signuparea'];
 		$data ['signUpName'] = $_POST ['signupname'];
 		$data ['signUpSex'] = $_POST ['signupsex'];
 		$data ['signUpBirthday'] = $_POST ['signupbirthday'];
