@@ -11,14 +11,14 @@ use Think\Controller;
 
 class ProjectController extends Controller
 {
-    //pfpÏã¸ÛÏîÄ¿
+    //pfpé¦™æ¸¯é¡¹ç›®
     public function pfp(){
         $this->display();
     }
-    //pstÏã¸ÛÏîÄ¿
+    //psté¦™æ¸¯é¡¹ç›®
     public function pst(){
         $news=M('breakingnews');
-        $color=['panel-default','panel-success','panel-primary','panel-danger','panel-info'];
+        $color=array('panel-default','panel-success','panel-primary','panel-danger','panel-info');
         $list=$news->where('breakingnewstype=8')->select();
         $length=count($list);
         for($x=0;$x<$length;$x++){
