@@ -47,13 +47,13 @@ class StudyabroadController extends Controller
         $Canada=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
         //Australia
         $type=mb_convert_encoding("澳大利亚", "UTF-8","EUC-CN");
-        $Australia=$Canada=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
+        $Australia=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
         //England
         $type=mb_convert_encoding("英国", "UTF-8","EUC-CN");
-        $England=$Canada=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
+        $England=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
         //Hongkong
         $type=mb_convert_encoding("香港", "UTF-8","EUC-CN");
-        $Hongkong=$Canada=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
+        $Hongkong=$news->where('breakingnewstype=4 and breakingnewsmaincontent="'.$type.'"')->order($orderby)->select();
 
         $this->assign('cases',$cases);
         $this->assign('exam1',$exam1);
